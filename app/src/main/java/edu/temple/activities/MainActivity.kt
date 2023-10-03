@@ -29,8 +29,8 @@ class MainActivity : AppCompatActivity() {
             adapter = TextSizeAdapter(textSizes){
 
                 val launchIntent = Intent(this@MainActivity, DisplayActivity::class.java)
-                launchIntent.putExtra(MESSAGE_KEY, textSizes)
-                startActivity(launchIntent)
+                launchIntent.putExtra(MESSAGE_KEY, selectedItem)
+                context.startActivity(launchIntent)
 
             }
             layoutManager = LinearLayoutManager(this@MainActivity)
@@ -51,7 +51,8 @@ class TextSizeAdapter (private val textSizes: Array<Int>, callback: (Int)->Unit)
 
         init {
             textView.setOnClickListener {
-                val selectedItem = textSizes[adapterPosition]
+
+                //var callback = {(textSizes[adapterPosition])-> textView }
 
 
             }
