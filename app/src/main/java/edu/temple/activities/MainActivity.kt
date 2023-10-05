@@ -32,7 +32,6 @@ class MainActivity : AppCompatActivity() {
                         .apply {
                             putExtra(FONT_SIZE_KEY, it.toFloat())
                     }
-
                 )
 
             }
